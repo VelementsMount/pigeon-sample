@@ -1,0 +1,319 @@
+{
+    "interfaces": [
+        {
+            "identifier": {
+                "bag": "payne.framework.pigeon.sample.encryption",
+                "name": "EncryptedAPI"
+            },
+            "labels": [
+                {
+                    "identifier": {
+                        "bag": "payne.framework.pigeon.core.annotation",
+                        "name": "Open"
+                    },
+                    "labels": [],
+                    "attributes": [
+                        {
+                            "identifier": {
+                                "bag": null,
+                                "name": "value"
+                            },
+                            "labels": [],
+                            "value": ""
+                        },
+                        {
+                            "identifier": {
+                                "bag": null,
+                                "name": "all"
+                            },
+                            "labels": [],
+                            "value": true
+                        },
+                        {
+                            "identifier": {
+                                "bag": null,
+                                "name": "work"
+                            },
+                            "labels": [],
+                            "value": {}
+                        }
+                    ]
+                }
+            ],
+            "extensions": [],
+            "functions": [
+                {
+                    "identifier": {
+                        "bag": null,
+                        "name": "login"
+                    },
+                    "labels": [
+                        {
+                            "identifier": {
+                                "bag": "payne.framework.pigeon.core.annotation",
+                                "name": "Encrypt"
+                            },
+                            "labels": [],
+                            "attributes": [
+                                {
+                                    "identifier": {
+                                        "bag": null,
+                                        "name": "separator"
+                                    },
+                                    "labels": [],
+                                    "value": 124
+                                },
+                                {
+                                    "identifier": {
+                                        "bag": null,
+                                        "name": "algorithm"
+                                    },
+                                    "labels": [],
+                                    "value": "DES"
+                                },
+                                {
+                                    "identifier": {
+                                        "bag": null,
+                                        "name": "keysize"
+                                    },
+                                    "labels": [],
+                                    "value": 56
+                                },
+                                {
+                                    "identifier": {
+                                        "bag": null,
+                                        "name": "keyEncoding"
+                                    },
+                                    "labels": [],
+                                    "value": {}
+                                },
+                                {
+                                    "identifier": {
+                                        "bag": null,
+                                        "name": "ivEncoding"
+                                    },
+                                    "labels": [],
+                                    "value": {}
+                                }
+                            ]
+                        },
+                        {
+                            "identifier": {
+                                "bag": "payne.framework.pigeon.core.annotation",
+                                "name": "Sign"
+                            },
+                            "labels": [],
+                            "attributes": [
+                                {
+                                    "identifier": {
+                                        "bag": null,
+                                        "name": "value"
+                                    },
+                                    "labels": [],
+                                    "value": "SHA1WithRSA"
+                                },
+                                {
+                                    "identifier": {
+                                        "bag": null,
+                                        "name": "separator"
+                                    },
+                                    "labels": [],
+                                    "value": 124
+                                },
+                                {
+                                    "identifier": {
+                                        "bag": null,
+                                        "name": "dataEncoding"
+                                    },
+                                    "labels": [],
+                                    "value": {}
+                                },
+                                {
+                                    "identifier": {
+                                        "bag": null,
+                                        "name": "signatureEncoding"
+                                    },
+                                    "labels": [],
+                                    "value": {}
+                                }
+                            ]
+                        }
+                    ],
+                    "result": {
+                        "bag": "payne.framework.pigeon.sample.jaxb",
+                        "name": "Customer"
+                    },
+                    "parameters": [
+                        {
+                            "identifier": {
+                                "bag": null,
+                                "name": null
+                            },
+                            "labels": [],
+                            "type": {
+                                "bag": "java.lang",
+                                "name": "String"
+                            }
+                        },
+                        {
+                            "identifier": {
+                                "bag": null,
+                                "name": null
+                            },
+                            "labels": [],
+                            "type": {
+                                "bag": "java.lang",
+                                "name": "String"
+                            }
+                        }
+                    ],
+                    "exceptions": [
+                        {
+                            "bag": "java.lang",
+                            "name": "Exception"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "models": [
+        {
+            "identifier": {
+                "bag": "java.lang",
+                "name": "Throwable"
+            },
+            "labels": [],
+            "extension": null,
+            "properties": [],
+            "primary": "THROWABLE"
+        },
+        {
+            "identifier": {
+                "bag": "java.lang",
+                "name": "Long"
+            },
+            "labels": [],
+            "extension": null,
+            "properties": [],
+            "primary": "LONG"
+        },
+        {
+            "identifier": {
+                "bag": "payne.framework.pigeon.sample.jaxb",
+                "name": "Customer"
+            },
+            "labels": [
+                {
+                    "identifier": {
+                        "bag": "javax.xml.bind.annotation",
+                        "name": "XmlRootElement"
+                    },
+                    "labels": [],
+                    "attributes": [
+                        {
+                            "identifier": {
+                                "bag": null,
+                                "name": "name"
+                            },
+                            "labels": [],
+                            "value": "##default"
+                        },
+                        {
+                            "identifier": {
+                                "bag": null,
+                                "name": "namespace"
+                            },
+                            "labels": [],
+                            "value": "##default"
+                        }
+                    ]
+                }
+            ],
+            "extension": {
+                "bag": "java.lang",
+                "name": "Object"
+            },
+            "properties": [
+                {
+                    "identifier": {
+                        "bag": null,
+                        "name": "id"
+                    },
+                    "labels": [],
+                    "type": {
+                        "bag": "java.lang",
+                        "name": "Long"
+                    }
+                },
+                {
+                    "identifier": {
+                        "bag": null,
+                        "name": "nickname"
+                    },
+                    "labels": [],
+                    "type": {
+                        "bag": "java.lang",
+                        "name": "String"
+                    }
+                },
+                {
+                    "identifier": {
+                        "bag": null,
+                        "name": "password"
+                    },
+                    "labels": [],
+                    "type": {
+                        "bag": "java.lang",
+                        "name": "String"
+                    }
+                },
+                {
+                    "identifier": {
+                        "bag": null,
+                        "name": "username"
+                    },
+                    "labels": [],
+                    "type": {
+                        "bag": "java.lang",
+                        "name": "String"
+                    }
+                }
+            ],
+            "primary": null
+        },
+        {
+            "identifier": {
+                "bag": "java.lang",
+                "name": "Object"
+            },
+            "labels": [],
+            "extension": null,
+            "properties": [],
+            "primary": "OBJECT"
+        },
+        {
+            "identifier": {
+                "bag": "java.lang",
+                "name": "Exception"
+            },
+            "labels": [],
+            "extension": {
+                "bag": "java.lang",
+                "name": "Throwable"
+            },
+            "properties": [],
+            "primary": null
+        },
+        {
+            "identifier": {
+                "bag": "java.lang",
+                "name": "String"
+            },
+            "labels": [],
+            "extension": null,
+            "properties": [],
+            "primary": "STRING"
+        }
+    ]
+}

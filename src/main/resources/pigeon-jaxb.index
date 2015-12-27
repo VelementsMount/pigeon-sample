@@ -1,0 +1,5 @@
+#实际上这里还是可以加注释的...只要以 # 开头就行
+payne.framework.pigeon.sample.jaxb.Order
+payne.framework.pigeon.sample.jaxb.OrderItem
+payne.framework.pigeon.sample.jaxb.Product
+payne.framework.pigeon.sample.jaxb.Customer
