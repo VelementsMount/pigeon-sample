@@ -12,4 +12,6 @@ public interface SampleAPI {
 
 	User login(@Param("username") String username, @Param("password") String password) throws Exception;
 
+	void makefriend(User a, User b) throws Exception;
+
 }

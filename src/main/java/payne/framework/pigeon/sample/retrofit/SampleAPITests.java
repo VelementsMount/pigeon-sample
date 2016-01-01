@@ -57,4 +57,9 @@ public class SampleAPITests {
 		System.out.println(api.loginByForm("payne", "123456"));
 	}
 
+	@Test
+	public void testMakefriend() throws Exception {
+		api.makefriend(new User("a", "a"), new User("b", "b"));
+	}
+
 }

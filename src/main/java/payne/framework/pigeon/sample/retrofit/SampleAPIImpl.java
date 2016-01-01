@@ -19,4 +19,8 @@ public class SampleAPIImpl implements SampleAPI {
 		return new User(username, password);
 	}
 
+	@Override
+	public void makefriend(User a, User b) throws Exception {
+		System.out.println(a + " make friend with " + b);
+	}
 }

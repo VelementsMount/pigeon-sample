@@ -22,4 +22,7 @@ public interface RetrofitSampleAPI {
 	@POST("/SampleAPIImpl/SampleAPI/login")
 	User loginByForm(@Field("username") String username, @Field("password") String password);
 
+	@POST("/SampleAPIImpl/SampleAPI/makefriend")
+	Object makefriend(@Body User... users);
+
 }
