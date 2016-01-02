@@ -33,6 +33,6 @@ import payne.framework.pigeon.core.annotation.Open;
 @Open
 public interface JaxbAPI {
 
-	Order getOrderById(long orderId) throws Exception;
+	Order getOrderById(long orderId, String fetchs) throws Exception;
 
 }

@@ -39,7 +39,7 @@ public class JaxbAPITests {
 
 	@Test
 	public void testGetOrderById() throws Exception {
-		Order order = api.getOrderById(1);
+		Order order = api.getOrderById(1, "sdf");
 		System.out.println(order);
 	}
 

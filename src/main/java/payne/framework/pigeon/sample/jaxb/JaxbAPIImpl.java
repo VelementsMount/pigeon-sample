@@ -2,7 +2,7 @@ package payne.framework.pigeon.sample.jaxb;
 
 public class JaxbAPIImpl implements JaxbAPI {
 
-	public Order getOrderById(long orderId) throws Exception {
+	public Order getOrderById(long orderId, String fetchs) throws Exception {
 		Customer current = new Customer();
 		current.setId(1L);
 		current.setNickname("Payne");
