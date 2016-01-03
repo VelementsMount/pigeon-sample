@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>payne.framework</groupId>
 	<artifactId>pigeon-sample</artifactId>
-	<version>4.0.0-release</version>
+	<version>4.0.1-release</version>
 	<packaging>war</packaging>
 	<name>pigeon-sample</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<pigeon.version>4.0.0-release</pigeon.version>
+		<pigeon.version>4.0.1-release</pigeon.version>
 	</properties>
 
 	<repositories>
