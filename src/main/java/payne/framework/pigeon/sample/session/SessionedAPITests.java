@@ -13,9 +13,15 @@ import payne.framework.pigeon.server.BlockingInvocationContext;
 import payne.framework.pigeon.server.InvocationContext;
 
 public class SessionedAPITests {
-
 	private InvocationContext context;
 	private SessionedAPI api;
+
+	public static void main(String[] args) throws Exception {
+		InvocationContext context = new BlockingInvocationContext();
+		context.register(new SessionedAPIImpl());
+		context.bind(9090);
+		context.startup();
+	}
 
 	@Before
 	public void initialize() throws Exception {
