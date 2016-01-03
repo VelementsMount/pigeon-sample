@@ -2,6 +2,8 @@ package payne.framework.pigeon.sample.jaxb;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * <p>
  * Description:
@@ -17,6 +19,7 @@ import java.io.Serializable;
  *
  * @version 1.0.0
  */
+@XmlRootElement
 public class Identifier implements Serializable {
 	private static final long serialVersionUID = 8553105571226288350L;
 
