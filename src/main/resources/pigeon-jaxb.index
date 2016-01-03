@@ -3,4 +3,4 @@ payne.framework.pigeon.sample.jaxb.Order
 payne.framework.pigeon.sample.jaxb.OrderItem
 payne.framework.pigeon.sample.jaxb.Product
 payne.framework.pigeon.sample.jaxb.Customer
-payne.framework.pigeon.core.formatting.Argument
+payne.framework.pigeon.sample.jaxb.Identifier
