@@ -14,7 +14,7 @@ import com.google.gson.Gson;
 
 public class SampleAPITests {
 	private InvocationContext context;
-	private RetrofitSampleAPI api = new RestAdapter.Builder().setConverter(new GsonConverter(new Gson())).setServer("http://127.0.0.1:9090").build().create(RetrofitSampleAPI.class);
+	private RetrofitSampleAPI api = new RestAdapter.Builder().setConverter(new GsonConverter(new Gson())).setEndpoint("http://localhost:9090").build().create(RetrofitSampleAPI.class);
 
 	public static void main(String[] args) throws Exception {
 		InvocationContext context = new BlockingInvocationContext();

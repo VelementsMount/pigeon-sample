@@ -28,7 +28,7 @@ public class SimpleAPITests {
 		context.register(new SimpleAPIImpl());
 		context.startup();
 		Client client = new Client("localhost", 9090);
-		api = client.create("HTTP", "application/x-java-serialized-object", "/SimpleAPIImpl", SimpleAPI.class);
+		api = client.create("HTTP", "application/json", "/SimpleAPIImpl", SimpleAPI.class);
 	}
 
 	@After
