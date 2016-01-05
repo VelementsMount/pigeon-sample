@@ -22,7 +22,7 @@ import payne.framework.pigeon.core.annotation.Open;
 @Open
 public interface RestfulAPI {
 
-	@Accept(modes = { Mode.POST }, media = { "application/xml" })
+	@Accept(modes = { Mode.POST }, media = { "application/json" })
 	boolean update(Article article) throws Exception;
 
 }
