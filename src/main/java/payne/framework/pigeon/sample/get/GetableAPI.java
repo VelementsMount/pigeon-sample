@@ -3,7 +3,7 @@ package payne.framework.pigeon.sample.get;
 import java.util.Map;
 
 import payne.framework.pigeon.core.annotation.Open;
-import payne.framework.pigeon.core.annotation.rest.Param;
+import payne.framework.pigeon.core.annotation.Param;
 
 /**
  * 因为框架默认就是采用HTTP作为传输协议客户端采用POST方法进行请求,所以所有开放的接口都可以通过HTTP来访问,

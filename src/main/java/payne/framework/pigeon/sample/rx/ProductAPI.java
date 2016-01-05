@@ -3,7 +3,7 @@ package payne.framework.pigeon.sample.rx;
 import java.util.List;
 
 import payne.framework.pigeon.core.annotation.Open;
-import payne.framework.pigeon.core.annotation.rest.Param;
+import payne.framework.pigeon.core.annotation.Param;
 
 /**
  * <p>

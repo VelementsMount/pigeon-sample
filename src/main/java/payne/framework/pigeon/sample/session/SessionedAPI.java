@@ -2,7 +2,7 @@ package payne.framework.pigeon.sample.session;
 
 import payne.framework.pigeon.client.cookie.CookieInterceptor;
 import payne.framework.pigeon.core.annotation.Open;
-import payne.framework.pigeon.core.annotation.rest.Param;
+import payne.framework.pigeon.core.annotation.Param;
 import payne.framework.pigeon.server.session.SessionInterceptor;
 import payne.framework.pigeon.server.session.SessionLocal;
 

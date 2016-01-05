@@ -1,7 +1,7 @@
 package payne.framework.pigeon.sample.retrofit;
 
 import payne.framework.pigeon.core.annotation.Open;
-import payne.framework.pigeon.core.annotation.rest.Param;
+import payne.framework.pigeon.core.annotation.Param;
 
 @Open
 public interface SampleAPI {
