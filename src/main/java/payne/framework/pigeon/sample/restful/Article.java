@@ -20,6 +20,7 @@ import java.io.Serializable;
 public class Article implements Serializable {
 	private static final long serialVersionUID = -1184987764855725101L;
 
+	private Long id;
 	private String author;
 	private String name;
 	private String content;
@@ -28,11 +29,20 @@ public class Article implements Serializable {
 		super();
 	}
 
-	public Article(String author, String name, String content) {
+	public Article(Long id, String author, String name, String content) {
 		super();
+		this.id = id;
 		this.author = author;
 		this.name = name;
 		this.content = content;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getAuthor() {
@@ -61,7 +71,7 @@ public class Article implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Article [author=" + author + ", name=" + name + ", content=" + content + "]";
+		return "Article [id=" + id + ", author=" + author + ", name=" + name + ", content=" + content + "]";
 	}
 
 }

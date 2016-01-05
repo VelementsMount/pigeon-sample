@@ -30,14 +30,14 @@ import com.google.gson.Gson;
  *
  * @version 1.0.0
  */
-public class RestfulAPITests {
+public class ForumAPITests {
 	private InvocationContext context;
-	private RetrofitRestfulAPI api = new RestAdapter.Builder().setConverter(new GsonConverter(new Gson())).setEndpoint("http://localhost:9090").build().create(RetrofitRestfulAPI.class);
+	private RetrofitForumAPI api = new RestAdapter.Builder().setConverter(new GsonConverter(new Gson())).setEndpoint("http://localhost:9090").build().create(RetrofitForumAPI.class);
 
 	public static void main(String[] args) throws Exception {
 		InvocationContext context = new BlockingInvocationContext();
 		context.bind(9090);
-		context.register(new RestfulAPIImpl());
+		context.register(new ForumAPIImpl());
 		context.startup();
 	}
 
@@ -45,7 +45,7 @@ public class RestfulAPITests {
 	public void initialize() throws Exception {
 		context = new BlockingInvocationContext();
 		context.bind(9090);
-		context.register(new RestfulAPIImpl());
+		context.register(new ForumAPIImpl());
 		context.startup();
 	}
 
@@ -55,23 +55,32 @@ public class RestfulAPITests {
 	}
 
 	@Test
-	public void testUpdate() throws Exception {
-		Article article = new Article("琼瑶", "还珠格格", "");
-		Assert.assertTrue(api.update(article));
+	public void testListArticles() throws Exception {
+		List<Article> articles = api.listArticles(3, 20);
+		Assert.assertEquals(20, articles.size());
 	}
 
 	@Test
-	public void testFind() throws Exception {
-		Article article = api.find("还珠格格");
+	public void testFindArticle() throws Exception {
+		Article article = api.findArticle(10L);
 		Assert.assertNotNull(article);
-		System.out.println(article);
 	}
 
 	@Test
-	public void testList() throws Exception {
-		List<Article> articles = api.list(3, 20);
-		Assert.assertNotNull(articles);
-		System.out.println(articles);
+	public void testDeletedArticle() throws Exception {
+		Assert.assertTrue(api.deleteArticle(12L));
+	}
+
+	@Test
+	public void testSaveArticle() throws Exception {
+		Article article = api.saveArticle(new Article(null, "琼瑶", "还珠格格", ""));
+		Assert.assertNotNull(article);
+	}
+
+	@Test
+	public void testUpdateArticle() throws Exception {
+		Article article = new Article(2L, "琼瑶", "还珠格格", "");
+		Assert.assertTrue(api.updateArticle(article));
 	}
 
 }
