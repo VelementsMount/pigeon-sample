@@ -1,5 +1,7 @@
 package payne.framework.pigeon.sample.restful;
 
+import java.util.List;
+
 import junit.framework.Assert;
 
 import org.junit.After;
@@ -56,6 +58,20 @@ public class RestfulAPITests {
 	public void testUpdate() throws Exception {
 		Article article = new Article("琼瑶", "还珠格格", "");
 		Assert.assertTrue(api.update(article));
+	}
+
+	@Test
+	public void testFind() throws Exception {
+		Article article = api.find("还珠格格");
+		Assert.assertNotNull(article);
+		System.out.println(article);
+	}
+
+	@Test
+	public void testList() throws Exception {
+		List<Article> articles = api.list(3, 20);
+		Assert.assertNotNull(articles);
+		System.out.println(articles);
 	}
 
 }

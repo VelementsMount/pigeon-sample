@@ -8,7 +8,7 @@
 	<name>pigeon-sample</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<pigeon.version>4.0.2-release</pigeon.version>
+		<pigeon.version>4.1.0-release</pigeon.version>
 	</properties>
 
 	<repositories>

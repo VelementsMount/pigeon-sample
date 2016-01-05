@@ -1,8 +1,11 @@
 package payne.framework.pigeon.sample.restful;
 
+import java.util.List;
+
 import payne.framework.pigeon.core.annotation.Accept;
 import payne.framework.pigeon.core.annotation.Accept.Mode;
 import payne.framework.pigeon.core.annotation.Open;
+import payne.framework.pigeon.core.annotation.Param;
 
 /**
  * <p>
@@ -24,5 +27,11 @@ public interface RestfulAPI {
 
 	@Accept(modes = { Mode.POST }, media = { "application/json" })
 	boolean update(Article article) throws Exception;
+
+	@Open("/find/{name:.*}")
+	Article find(@Param("name") String name) throws Exception;
+
+	@Open("/list/{1}/{2:\\d+}")
+	List<Article> list(int page, int size) throws Exception;
 
 }

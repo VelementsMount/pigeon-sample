@@ -1,7 +1,11 @@
 package payne.framework.pigeon.sample.restful;
 
+import java.util.List;
+
 import retrofit.http.Body;
+import retrofit.http.GET;
 import retrofit.http.POST;
+import retrofit.http.Path;
 
 /**
  * <p>
@@ -21,6 +25,12 @@ import retrofit.http.POST;
 public interface RetrofitRestfulAPI {
 
 	@POST("/RestfulAPIImpl/RestfulAPI/update")
-	boolean update(@Body Article article) throws Exception;
+	boolean update(@Body Article article);
+
+	@GET("/RestfulAPIImpl/RestfulAPI/find/{name}")
+	Article find(@Path("name") String name);
+
+	@GET("/RestfulAPIImpl/RestfulAPI/list/{page}/{size}")
+	List<Article> list(@Path("page") int page, @Path("size") int size);
 
 }

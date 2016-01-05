@@ -21,14 +21,16 @@ import java.util.regex.Pattern;
 public class Tests {
 
 	public static void main(String[] args) throws Exception {
-		String path = "/SampleAPIImpl/SampleAPI/page/{page:\\d+}/size/id-{size:\\d+}";
+		String path = "/SampleAPIImpl/SampleAPI/page/{page}/size/id-{size:\\d+}";
 		Pattern pattern = Pattern.compile("\\{(?:(\\w+)\\:)?(.*?)\\}");
 		Matcher matcher = pattern.matcher(path);
 		while (matcher.find()) {
 			for (int i = 0; i <= matcher.groupCount(); i++) {
 				System.out.println(i + ":" + matcher.group(i));
 			}
+			path = path.replace(matcher.group(), matcher.group(2));
 		}
+		System.out.println(path);
 	}
 
 }
