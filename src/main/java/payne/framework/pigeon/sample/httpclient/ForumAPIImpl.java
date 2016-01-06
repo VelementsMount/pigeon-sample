@@ -1,4 +1,4 @@
-package payne.framework.pigeon.sample.restful;
+package payne.framework.pigeon.sample.httpclient;
 
 import java.util.ArrayList;
 import java.util.List;
