@@ -6,6 +6,7 @@ import payne.framework.pigeon.core.annotation.Accept;
 import payne.framework.pigeon.core.annotation.Accept.Mode;
 import payne.framework.pigeon.core.annotation.Open;
 import payne.framework.pigeon.core.annotation.Param;
+import payne.framework.pigeon.core.annotation.Work;
 
 /**
  * <p>
@@ -23,9 +24,10 @@ import payne.framework.pigeon.core.annotation.Param;
  * @version 1.0.0
  */
 @Open
+@Work(timeout = 2 * 60 * 1000)
 public interface ForumAPI {
 
-	@Accept(modes = { Mode.GET })
+	@Accept(modes = { Mode.GET, Mode.POST })
 	@Open("/articles/page={1:\\d+}/size={2:\\d+}")
 	List<Article> listArticles(int page, int size) throws Exception;
 

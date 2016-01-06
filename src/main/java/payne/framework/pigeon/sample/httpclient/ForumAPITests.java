@@ -1,6 +1,9 @@
 package payne.framework.pigeon.sample.httpclient;
 
 import java.io.IOException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.nio.charset.Charset;
 import java.util.List;
 
 import junit.framework.Assert;
@@ -18,6 +21,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import payne.framework.pigeon.client.Client;
 import payne.framework.pigeon.server.BlockingInvocationContext;
 import payne.framework.pigeon.server.InvocationContext;
 
@@ -41,6 +45,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public class ForumAPITests {
 	private InvocationContext context;
+	private ForumAPI api;
 
 	public static void main(String[] args) throws Exception {
 		InvocationContext context = new BlockingInvocationContext();
@@ -55,11 +60,21 @@ public class ForumAPITests {
 		context.bind(9090);
 		context.register(new ForumAPIImpl());
 		context.startup();
+
+		Client client = new Client("localhost", 9090);
+		api = client.create("HTTP", "application/json", "/ForumAPIImpl", ForumAPI.class);
 	}
 
 	@After
 	public void destroy() throws Exception {
 		context.shutdown();
+	}
+
+	@Test
+	public void testEncode() throws Exception {
+		String encoded = URLEncoder.encode("/articles/page={1:\\d+}/size={2:\\d+}", Charset.defaultCharset().name());
+		String decoded = URLDecoder.decode(encoded, Charset.defaultCharset().name());
+		System.out.println(decoded);
 	}
 
 	/**
@@ -69,9 +84,18 @@ public class ForumAPITests {
 	 */
 	@Test
 	public void testListArticles() throws Exception {
-		HttpClient client = new DefaultHttpClient();
 		int page = 2;
 		int size = 20;
+
+		// 框架客户端方案
+		List<Article> articles = api.listArticles(page, size);
+
+		Assert.assertNotNull(articles);
+		Assert.assertEquals(20, articles.size());
+		System.out.println(articles);
+
+		// http client 方案
+		HttpClient client = new DefaultHttpClient();
 		// 这里的路径 /ForumAPIImpl是指实现类 /ForumAPI是指接口 /articles/page=\\d+/size=\\d+是指方法,
 		// 实际上都是可以通过 在实现类/接口/方法上加上@Open注解来进行配置, 只不过框架在默认状态下取它的名称作为路径
 		HttpGet get = new HttpGet("http://localhost:9090/ForumAPIImpl/ForumAPI/articles/page=" + page + "/size=" + size);
@@ -89,7 +113,7 @@ public class ForumAPITests {
 		// json 反序列化
 		ObjectMapper mapper = new ObjectMapper();
 		// 注意这里的TypeReference是一个匿名内部类
-		List<Article> articles = mapper.readValue(response.getEntity().getContent(), new TypeReference<List<Article>>() {
+		articles = mapper.readValue(response.getEntity().getContent(), new TypeReference<List<Article>>() {
 		});
 		Assert.assertNotNull(articles);
 		Assert.assertEquals(20, articles.size());
@@ -98,8 +122,10 @@ public class ForumAPITests {
 
 	@Test
 	public void testFindArticle() throws Exception {
-		HttpClient client = new DefaultHttpClient();
 		Long id = 10L;
+
+		// http client 方案
+		HttpClient client = new DefaultHttpClient();
 		HttpGet get = new HttpGet("http://localhost:9090/ForumAPIImpl/ForumAPI/article/" + id);
 		HttpResponse response = client.execute(get);
 
