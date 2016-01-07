@@ -110,6 +110,16 @@
 			<artifactId>rxjava</artifactId>
 			<version>1.0.16</version>
 		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-client-android</artifactId>
+			<version>${pigeon.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-client-async</artifactId>
+			<version>${pigeon.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>pigeon-sample</finalName>

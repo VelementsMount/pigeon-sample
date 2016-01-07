@@ -1,7 +1,7 @@
 package payne.framework.pigeon.sample.asynchronous;
 
-import payne.framework.pigeon.client.AndroidClient;
-import payne.framework.pigeon.client.AsyncClient;
+import payne.framework.pigeon.client.android.AndroidClient;
+import payne.framework.pigeon.client.async.AsyncClient;
 import payne.framework.pigeon.core.Callback;
 import payne.framework.pigeon.core.annotation.Open;
 import payne.framework.pigeon.generation.annotation.Name;
