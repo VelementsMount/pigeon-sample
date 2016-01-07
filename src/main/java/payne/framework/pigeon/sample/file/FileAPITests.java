@@ -8,8 +8,8 @@ import org.junit.Test;
 
 import payne.framework.pigeon.client.Client;
 import payne.framework.pigeon.core.Document;
-import payne.framework.pigeon.server.BlockingInvocationContext;
 import payne.framework.pigeon.server.InvocationContext;
+import payne.framework.pigeon.server.bio.BlockingInvocationContext;
 
 public class FileAPITests {
 	private InvocationContext context;

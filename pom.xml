@@ -120,6 +120,21 @@
 			<artifactId>pigeon-client-async</artifactId>
 			<version>${pigeon.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-server-nio</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-server-bio</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-server-aio</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>pigeon-sample</finalName>

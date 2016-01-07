@@ -1,10 +1,10 @@
 package payne.framework.pigeon.sample.advance;
 
 import payne.framework.pigeon.core.annotation.Open;
-import payne.framework.pigeon.server.AsynchronousNonBlockingInvocationContext;
-import payne.framework.pigeon.server.BlockingInvocationContext;
 import payne.framework.pigeon.server.InvocationContext;
-import payne.framework.pigeon.server.NonBlockingInvocationContext;
+import payne.framework.pigeon.server.aio.AsynchronousNonBlockingInvocationContext;
+import payne.framework.pigeon.server.bio.BlockingInvocationContext;
+import payne.framework.pigeon.server.nio.NonBlockingInvocationContext;
 
 /**
  * <p>

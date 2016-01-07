@@ -11,7 +11,7 @@ import payne.framework.pigeon.generation.objc.ObjectiveCGenerator;
 import payne.framework.pigeon.generation.objc.ObjectiveCGeneratorService;
 import payne.framework.pigeon.generation.reactive.ReactiveGenerator;
 import payne.framework.pigeon.server.InvocationContext;
-import payne.framework.pigeon.server.NonBlockingInvocationContext;
+import payne.framework.pigeon.server.nio.NonBlockingInvocationContext;
 
 /**
  * 有两种方式可以生成开放接口的跨平台接口:<br/>

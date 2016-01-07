@@ -15,8 +15,8 @@ import org.springframework.web.client.RestTemplate;
 
 import payne.framework.pigeon.client.Client;
 import payne.framework.pigeon.core.Invocation;
-import payne.framework.pigeon.server.BlockingInvocationContext;
 import payne.framework.pigeon.server.InvocationContext;
+import payne.framework.pigeon.server.bio.BlockingInvocationContext;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

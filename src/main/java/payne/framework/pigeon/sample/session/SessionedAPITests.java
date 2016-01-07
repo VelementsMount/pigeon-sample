@@ -9,8 +9,8 @@ import org.junit.Test;
 import payne.framework.pigeon.client.Client;
 import payne.framework.pigeon.client.cookie.CookieInterceptor;
 import payne.framework.pigeon.client.cookie.InternalCookieManager;
-import payne.framework.pigeon.server.BlockingInvocationContext;
 import payne.framework.pigeon.server.InvocationContext;
+import payne.framework.pigeon.server.bio.BlockingInvocationContext;
 
 public class SessionedAPITests {
 	private InvocationContext context;

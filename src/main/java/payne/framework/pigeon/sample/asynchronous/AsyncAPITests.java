@@ -10,8 +10,8 @@ import payne.framework.pigeon.client.async.AsyncClient;
 import payne.framework.pigeon.core.CallbackAdapter;
 import payne.framework.pigeon.generation.Interface;
 import payne.framework.pigeon.generation.async.AsynchronousGenerator;
-import payne.framework.pigeon.server.BlockingInvocationContext;
 import payne.framework.pigeon.server.InvocationContext;
+import payne.framework.pigeon.server.bio.BlockingInvocationContext;
 
 /**
  * <p>

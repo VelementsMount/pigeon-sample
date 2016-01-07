@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import payne.framework.pigeon.client.Client;
-import payne.framework.pigeon.server.AsynchronousNonBlockingInvocationContext;
+import payne.framework.pigeon.server.aio.AsynchronousNonBlockingInvocationContext;
 
 /**
  * <p>

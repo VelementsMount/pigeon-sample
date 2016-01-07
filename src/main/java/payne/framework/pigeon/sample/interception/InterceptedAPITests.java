@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import payne.framework.pigeon.client.Client;
 import payne.framework.pigeon.core.Interceptor;
 import payne.framework.pigeon.core.Invocation;
-import payne.framework.pigeon.server.BlockingInvocationContext;
 import payne.framework.pigeon.server.InvocationContext;
+import payne.framework.pigeon.server.bio.BlockingInvocationContext;
 
 public class InterceptedAPITests {
 	private InvocationContext context;
