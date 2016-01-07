@@ -47,6 +47,21 @@
 		</dependency>
 		<dependency>
 			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-generation-objc</artifactId>
+			<version>${pigeon.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-generation-async</artifactId>
+			<version>${pigeon.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-generation-reactive</artifactId>
+			<version>${pigeon.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
 			<artifactId>pigeon-integration</artifactId>
 			<version>${pigeon.version}</version>
 		</dependency>
