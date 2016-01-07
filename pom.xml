@@ -135,6 +135,16 @@
 			<artifactId>pigeon-server-aio</artifactId>
 			<version>4.1.0-release</version>
 		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-integration-web</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-integration-web-spring</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>pigeon-sample</finalName>
