@@ -7,13 +7,13 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import payne.framework.pigeon.core.annotation.Compress;
-import payne.framework.pigeon.core.annotation.Encode;
-import payne.framework.pigeon.core.annotation.Encrypt;
 import payne.framework.pigeon.core.annotation.Process;
-import payne.framework.pigeon.core.annotation.Sign;
-import payne.framework.pigeon.core.annotation.Validate;
 import payne.framework.pigeon.core.annotation.Work;
+import payne.framework.pigeon.core.compression.extend.Compress;
+import payne.framework.pigeon.core.digestion.extend.Validate;
+import payne.framework.pigeon.core.encoding.extend.Encode;
+import payne.framework.pigeon.core.encryption.extend.Encrypt;
+import payne.framework.pigeon.core.encryption.extend.Sign;
 import payne.framework.pigeon.core.processing.Procedure;
 
 /**

@@ -122,6 +122,11 @@
 		</dependency>
 		<dependency>
 			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-client-reactive</artifactId>
+			<version>${pigeon.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
 			<artifactId>pigeon-server-nio</artifactId>
 			<version>4.1.0-release</version>
 		</dependency>
@@ -143,6 +148,41 @@
 		<dependency>
 			<groupId>payne.framework</groupId>
 			<artifactId>pigeon-integration-web-spring</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-core-compression</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-core-digestion</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-core-encoding</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-core-encryption</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-core-formatting-hessian</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-core-formatting-jackson</artifactId>
+			<version>4.1.0-release</version>
+		</dependency>
+		<dependency>
+			<groupId>payne.framework</groupId>
+			<artifactId>pigeon-core-formatting-jaxb</artifactId>
 			<version>4.1.0-release</version>
 		</dependency>
 	</dependencies>

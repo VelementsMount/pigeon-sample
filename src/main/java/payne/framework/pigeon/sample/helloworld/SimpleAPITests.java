@@ -5,7 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import payne.framework.pigeon.client.Client;
-import payne.framework.pigeon.generation.objc.ObjectiveCGeneratorService;
+import payne.framework.pigeon.core.factory.bean.SingletonBeanFactory;
+import payne.framework.pigeon.core.formatting.InvocationFormatter;
 import payne.framework.pigeon.server.InvocationContext;
 import payne.framework.pigeon.server.bio.BlockingInvocationContext;
 
@@ -14,11 +15,7 @@ public class SimpleAPITests {
 	private SimpleAPI api;
 
 	public static void main(String[] args) throws Exception {
-		InvocationContext context = new BlockingInvocationContext();
-		context.bind(9090);
-		context.register(new SimpleAPIImpl());
-		context.register(new ObjectiveCGeneratorService(false));
-		context.startup();
+		new SingletonBeanFactory().get("application/json", InvocationFormatter.class);
 	}
 
 	@Before

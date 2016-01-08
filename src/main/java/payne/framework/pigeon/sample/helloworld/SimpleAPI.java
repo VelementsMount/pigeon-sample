@@ -1,17 +1,18 @@
 package payne.framework.pigeon.sample.helloworld;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 import org.apache.commons.lang.Validate;
 
 import payne.framework.pigeon.core.annotation.Chunk;
 import payne.framework.pigeon.core.annotation.Close;
-import payne.framework.pigeon.core.annotation.Compress;
-import payne.framework.pigeon.core.annotation.Encode;
-import payne.framework.pigeon.core.annotation.Encrypt;
 import payne.framework.pigeon.core.annotation.Open;
-import payne.framework.pigeon.core.annotation.Sign;
 import payne.framework.pigeon.core.annotation.Work;
+import payne.framework.pigeon.core.compression.extend.Compress;
+import payne.framework.pigeon.core.encoding.extend.Encode;
+import payne.framework.pigeon.core.encryption.extend.Encrypt;
+import payne.framework.pigeon.core.encryption.extend.Sign;
 
 /**
  * 最简单的接口定义方式,只需要在接口类上面标注上{@link Open}注解即可,<br/>

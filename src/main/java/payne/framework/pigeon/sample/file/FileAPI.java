@@ -3,8 +3,8 @@ package payne.framework.pigeon.sample.file;
 import java.io.File;
 
 import payne.framework.pigeon.core.Document;
-import payne.framework.pigeon.core.annotation.Compress;
 import payne.framework.pigeon.core.annotation.Open;
+import payne.framework.pigeon.core.compression.extend.Compress;
 
 /**
  * 文件API,因为文件一般数据比较大,所以压缩可以提高网络传输效率,只需要通过注解{@link Compress}即可轻松拥有数据压缩功能
