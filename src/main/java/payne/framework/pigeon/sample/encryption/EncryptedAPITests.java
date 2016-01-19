@@ -27,7 +27,6 @@ public class EncryptedAPITests {
 		context = new BlockingInvocationContext();
 		context.bind(9090);
 		context.register(new EncryptedAPIImpl());
-		context.setBeanConfigurationPaths(new String[] { "pigeon.properties", "rsa-private.properties" });
 		context.startup();
 		Client client = new Client("localhost", 9090, "pigeon.properties", "rsa-public.properties");
 		api = client.create("HTTP/1.1", "application/x-java-serialized-object", "/EncryptedAPIImpl", EncryptedAPI.class);

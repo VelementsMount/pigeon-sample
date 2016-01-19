@@ -17,7 +17,6 @@ public class ValidatedAPITests {
 	public static void main(String[] args) throws Exception {
 		InvocationContext context = new BlockingInvocationContext();
 		context.bind(9090);
-		context.setBeanConfigurationPaths(new String[] { "pigeon.properties", "pigeon-encryption.properties" });
 		context.register(new ValidatedAPIImpl());
 		context.register(new ObjectiveCGeneratorService(false));
 		context.startup();
@@ -27,7 +26,6 @@ public class ValidatedAPITests {
 	public void initialize() throws Exception {
 		context = new BlockingInvocationContext();
 		context.bind(9090);
-		context.setBeanConfigurationPaths(new String[] { "pigeon.properties", "pigeon-encryption.properties" });
 		context.register(new ValidatedAPIImpl());
 		context.startup();
 		Client client = new Client("localhost", 9090, "pigeon.properties", "pigeon-encryption.properties");
